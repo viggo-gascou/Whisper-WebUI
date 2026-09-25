@@ -24,7 +24,7 @@ class DiarizationPipeline:
             device = torch.device(device)
         self.model = Pipeline.from_pretrained(
             model_name,
-            use_auth_token=use_auth_token,
+            token=use_auth_token,
             cache_dir=cache_dir
         ).to(device)
 
