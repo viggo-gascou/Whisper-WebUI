@@ -53,7 +53,7 @@ class App:
         whisper_params = self.default_params["whisper"]
         vad_params = self.default_params["vad"]
         diarization_params = self.default_params["diarization"]
-        diarization_params["hf_token"] = os.getenv("HF_TOKEN")
+        diarization_params["hf_token"] = os.getenv("HF_TOKEN", "")
         uvr_params = self.default_params["bgm_separation"]
 
         with gr.Row():
